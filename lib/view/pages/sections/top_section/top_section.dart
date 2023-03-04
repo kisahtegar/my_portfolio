@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:my_portfolio/view/pages/sections/top_section/widget/menu.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
 import '../../../../consts.dart';
@@ -21,24 +20,12 @@ class TopSection extends StatelessWidget {
         maxHeight: ResponsiveValue(
           context,
           defaultValue: 600.0,
-          valueWhen: const [
-            Condition.smallerThan(name: MOBILE, value: 360.0),
-            Condition.smallerThan(name: "590", value: 400.0),
-            Condition.smallerThan(name: "690", value: 400.0),
-            Condition.smallerThan(name: "790", value: 400.0),
-            Condition.smallerThan(name: "866", value: 500.0),
-          ],
+          valueWhen: ResponsiveConst.topSectionBackgroundImageMaxHeight,
         ).value!,
         minHeight: ResponsiveValue(
           context,
           defaultValue: 400.0,
-          valueWhen: const [
-            Condition.smallerThan(name: MOBILE, value: 360.0),
-            Condition.smallerThan(name: "590", value: 300.0),
-            Condition.smallerThan(name: "690", value: 300.0),
-            Condition.smallerThan(name: "790", value: 300.0),
-            Condition.smallerThan(name: "866", value: 300.0),
-          ],
+          valueWhen: ResponsiveConst.topSectionBackgroundImageMinHeight,
         ).value!,
       ),
       decoration: const BoxDecoration(
@@ -79,7 +66,6 @@ class BlurBoxWidget extends StatelessWidget {
         filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
         child: Container(
           width: double.infinity,
-          // color: Colors.red,
           color: Colors.white.withOpacity(0),
           padding: const EdgeInsets.symmetric(
             horizontal: kDefaultPadding * 2,
@@ -88,25 +74,12 @@ class BlurBoxWidget extends StatelessWidget {
             maxWidth: ResponsiveValue(
               context,
               defaultValue: 1110.0,
-              valueWhen: const [
-                Condition.smallerThan(name: MOBILE, value: 360.0),
-                Condition.smallerThan(name: "590", value: 450.0),
-                Condition.smallerThan(name: "690", value: 550.0),
-                Condition.smallerThan(name: "790", value: 650.0),
-                Condition.smallerThan(name: "866", value: 720.0),
-                Condition.smallerThan(name: TABLET, value: 800.0),
-              ],
+              valueWhen: ResponsiveConst.topSectionBlurBoxMaxWidth,
             ).value!,
             maxHeight: ResponsiveValue(
               context,
               defaultValue: 650.0,
-              valueWhen: const [
-                Condition.smallerThan(name: MOBILE, value: 260.0),
-                Condition.smallerThan(name: "590", value: 320.0),
-                Condition.smallerThan(name: "690", value: 360.0),
-                Condition.smallerThan(name: "866", value: 400.0),
-                Condition.smallerThan(name: TABLET, value: 450.0),
-              ],
+              valueWhen: ResponsiveConst.topSectionBlurBoxMaxHeight,
             ).value!,
           ),
           child: Column(
@@ -123,26 +96,18 @@ class BlurBoxWidget extends StatelessWidget {
                       children: [
                         Text(
                           "Hello There!",
-                          style:
-                              Theme.of(context).textTheme.headline5!.copyWith(
-                                    color: Colors.white,
-                                    fontSize: ResponsiveValue(
-                                      context,
-                                      defaultValue: 25.0,
-                                      valueWhen: const [
-                                        Condition.smallerThan(
-                                            name: "590", value: 17.0),
-                                        Condition.smallerThan(
-                                            name: "690", value: 18.0),
-                                        Condition.smallerThan(
-                                            name: "790", value: 20.0),
-                                        Condition.smallerThan(
-                                          name: "866",
-                                          value: 23.0,
-                                        ),
-                                      ],
-                                    ).value,
-                                  ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall!
+                              .copyWith(
+                                color: Colors.white,
+                                fontSize: ResponsiveValue(
+                                  context,
+                                  defaultValue: 25.0,
+                                  valueWhen: ResponsiveConst
+                                      .topSectionHelloThereFontSize,
+                                ).value,
+                              ),
                         ),
                         Text(
                           "Kisah Tegar \nPutra Abdi",
@@ -150,15 +115,8 @@ class BlurBoxWidget extends StatelessWidget {
                             fontSize: ResponsiveValue(
                               context,
                               defaultValue: 100.0,
-                              valueWhen: const [
-                                Condition.smallerThan(name: "590", value: 36.0),
-                                Condition.smallerThan(name: "690", value: 40.0),
-                                Condition.smallerThan(name: "790", value: 47.0),
-                                Condition.smallerThan(name: "866", value: 60.0),
-                                Condition.smallerThan(
-                                    name: TABLET, value: 70.0),
-                                // Condition.largerThan(name: DESKTOP, value: 100.0)
-                              ],
+                              valueWhen:
+                                  ResponsiveConst.topSectionMyNameFontSize,
                             ).value,
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -167,26 +125,18 @@ class BlurBoxWidget extends StatelessWidget {
                         ),
                         Text(
                           "Flutter Developer",
-                          style:
-                              Theme.of(context).textTheme.headline5!.copyWith(
-                                    color: Colors.white,
-                                    fontSize: ResponsiveValue(
-                                      context,
-                                      defaultValue: 25.0,
-                                      valueWhen: const [
-                                        Condition.smallerThan(
-                                            name: "590", value: 17.0),
-                                        Condition.smallerThan(
-                                            name: "690", value: 18.0),
-                                        Condition.smallerThan(
-                                            name: "790", value: 20.0),
-                                        Condition.smallerThan(
-                                          name: "866",
-                                          value: 23.0,
-                                        ),
-                                      ],
-                                    ).value,
-                                  ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall!
+                              .copyWith(
+                                color: Colors.white,
+                                fontSize: ResponsiveValue(
+                                  context,
+                                  defaultValue: 25.0,
+                                  valueWhen:
+                                      ResponsiveConst.topSectionSubjectFontSize,
+                                ).value,
+                              ),
                         ),
                         const SizedBox(height: 70),
                         Row(
@@ -223,26 +173,15 @@ class BlurBoxWidget extends StatelessWidget {
                         radius: ResponsiveValue(
                           context,
                           defaultValue: 180.0,
-                          valueWhen: const [
-                            Condition.smallerThan(name: "590", value: 83.0),
-                            Condition.smallerThan(name: "690", value: 97.0),
-                            Condition.smallerThan(name: "790", value: 105.0),
-                            Condition.smallerThan(name: "866", value: 110.0),
-                            Condition.smallerThan(name: TABLET, value: 130.0),
-                          ],
+                          valueWhen:
+                              ResponsiveConst.topSectionImageBackgroundRadius,
                         ).value,
                         backgroundColor: Colors.white,
                         child: CircleAvatar(
                           radius: ResponsiveValue(
                             context,
                             defaultValue: 170.0,
-                            valueWhen: const [
-                              Condition.smallerThan(name: "590", value: 77.0),
-                              Condition.smallerThan(name: "690", value: 90.0),
-                              Condition.smallerThan(name: "790", value: 98.0),
-                              Condition.smallerThan(name: "866", value: 100.0),
-                              Condition.smallerThan(name: TABLET, value: 120.0),
-                            ],
+                            valueWhen: ResponsiveConst.topSectionImage,
                           ).value,
                           backgroundColor: Colors.blue,
                           backgroundImage:
@@ -259,8 +198,6 @@ class BlurBoxWidget extends StatelessWidget {
                 visible: false,
                 visibleWhen: const [Condition.smallerThan(name: "590")],
                 child: Column(
-                  // mainAxisAlignment: MainAxisAlignment.center,
-                  // crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const CircleAvatar(
                       radius: 68.0,
@@ -283,10 +220,11 @@ class BlurBoxWidget extends StatelessWidget {
                     ),
                     Text(
                       "Flutter Developer",
-                      style: Theme.of(context).textTheme.headline5!.copyWith(
-                            color: Colors.white,
-                            fontSize: 14.0,
-                          ),
+                      style:
+                          Theme.of(context).textTheme.headlineSmall!.copyWith(
+                                color: Colors.white,
+                                fontSize: 14.0,
+                              ),
                     ),
                     const SizedBox(height: 20),
                     Row(

@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import '../../../../../consts.dart';
 
 class Menu extends StatefulWidget {
+  const Menu({super.key});
+
   @override
-  _MenuState createState() => _MenuState();
+  State<Menu> createState() => _MenuState();
 }
 
 class _MenuState extends State<Menu> {

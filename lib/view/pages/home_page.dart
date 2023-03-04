@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/consts.dart';
 import 'package:my_portfolio/view/pages/sections/about_section/about_section.dart';
 import 'package:my_portfolio/view/pages/sections/top_section/top_section.dart';
-import 'package:my_portfolio/view/pages/sections/top_section/widget/menu.dart';
+
+import 'sections/project_section/project_section.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,18 +12,11 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: [
-            const TopSection(),
-            kSizeVer(kDefaultPadding * 2),
-            const AboutSection(),
-            kSizeVer(kDefaultPadding * 2),
-            // kSizeVer(kDefaultPadding * 2),
-            // Menu(),
-            // Container(
-            //   height: 100,
-            //   width: 100,
-            //   color: Colors.redAccent,
-            // ),
+          children: const [
+            TopSection(),
+            AboutSection(),
+            ProjectSection(),
+            SizedBox(height: 100)
           ],
         ),
       ),
