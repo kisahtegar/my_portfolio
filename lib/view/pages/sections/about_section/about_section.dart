@@ -41,8 +41,7 @@ class AboutSection extends StatelessWidget {
                 ),
                 Expanded(
                   child: AboutSectionText(
-                    text:
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: AboutSectionConst.aboutMyStory,
                     fontSize: ResponsiveValue(
                       context,
                       defaultValue: 15.0,
@@ -56,8 +55,7 @@ class AboutSection extends StatelessWidget {
                 ),
                 Expanded(
                   child: AboutSectionText(
-                    text:
-                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                    text: AboutSectionConst.experienceStory,
                     fontSize: ResponsiveValue(
                       context,
                       defaultValue: 15.0,
@@ -98,8 +96,7 @@ class AboutSection extends StatelessWidget {
                     const SizedBox(width: 13),
                     Expanded(
                       child: AboutSectionText(
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                        text: AboutSectionConst.aboutMyStory,
                         fontSize: ResponsiveValue(
                           context,
                           defaultValue: 15.0,
@@ -119,8 +116,7 @@ class AboutSection extends StatelessWidget {
                     ),
                     Expanded(
                       child: AboutSectionText(
-                        text:
-                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                        text: AboutSectionConst.experienceStory,
                         fontSize: ResponsiveValue(
                           context,
                           defaultValue: 15.0,

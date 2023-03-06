@@ -158,3 +158,11 @@ class ResponsiveAboutConst {
     const Condition.smallerThan(name: DESKTOP, value: 16.0),
   ];
 }
+
+class AboutSectionConst {
+  static const String aboutMyStory =
+      "Hi, my name is Kisah Tegar Putra Abdi, I'm from Indonesia. I really like learning about programming, I learned programming since I was in high school. The first language I learned was python, creating desktop applications and other programs.";
+
+  static const String experienceStory =
+      "And now I'm interested in Flutter making mobile applications, desktops, websites and others. I am interested in studying technology, if you have any ideas, projects you can contact me";
+}
