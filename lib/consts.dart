@@ -159,6 +159,24 @@ class ResponsiveAboutConst {
   ];
 }
 
+class ResponsiveProjectConst {}
+
+class ResponsiveSectionTitleConst {
+  static final List<Condition<double>> containerMaxWidth = [
+    const Condition.smallerThan(name: "590", value: 455.0),
+    const Condition.smallerThan(name: "690", value: 555.0),
+    const Condition.smallerThan(name: "790", value: 660.0),
+    const Condition.smallerThan(name: "866", value: 720.0),
+    const Condition.smallerThan(name: TABLET, value: 770.0),
+    const Condition.smallerThan(name: DESKTOP, value: 900.0),
+  ];
+
+  static final List<Condition<double>> containerHeight = [
+    const Condition.smallerThan(name: TABLET, value: 770.0),
+    const Condition.smallerThan(name: DESKTOP, value: 900.0),
+  ];
+}
+
 class AboutSectionConst {
   static const String aboutMyStory =
       "Hi, my name is Kisah Tegar Putra Abdi, I'm from Indonesia. I really like learning about programming, I learned programming since I was in high school. The first language I learned was python, creating desktop applications and other programs.";
